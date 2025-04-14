@@ -8,6 +8,16 @@ Rudra is a secure and efficient command-line encryption tool designed to provide
 - **Password Protection**: Ensures that the program is used securely by requiring a password.
 - **Secure Memory Handling**: Includes memory wiping techniques to ensure sensitive data is not left in memory.
 - **Checksum Validation**: Verifies the integrity of files during decryption.
+- **Password Management**: You can dynamically set and remove the password using environment variables. Use `echo` to set the password and `unset` to remove it:
+  - **Set Password**: 
+    ```bash
+    echo "export RUDRA_PASSWORD='your_password'" >> ~/.bashrc
+    source ~/.bashrc
+    ```
+  - **Remove Password**:
+    ```bash
+    unset RUDRA_PASSWORD
+    ```
 
 ## Installation
 
