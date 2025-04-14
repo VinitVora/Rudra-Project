@@ -1,3 +1,6 @@
+Here is the updated `README.md` with the added **Usage** section you provided:
+
+```markdown
 # Rudra - XOR-Based Encryption Program
 
 Rudra is a secure and efficient command-line encryption tool designed to provide XOR-based encryption with multi-threading support for fast and secure file processing. The program supports both encryption and decryption, password protection, and secure memory handling.
@@ -33,3 +36,73 @@ Ensure that you have the following dependencies installed:
    ```bash
    git clone https://github.com/username/rudra-encryption.git
    cd rudra-encryption
+   ```
+
+2. **Build the program** using `make`:
+   ```bash
+   make
+   ```
+
+3. **Install the program** (optional):
+   ```bash
+   sudo make install
+   ```
+
+   This will copy the binary to `/usr/local/bin` for system-wide access.
+
+## Usage
+
+### Basic Usage
+The basic syntax for using Rudra is as follows:
+
+```bash
+rudra <input_file> <output_file> <key_file> [-p <password>] [-t <threads>] [-v] [-d|-e]
+```
+
+### Arguments:
+- `<input_file>`: The file you want to encrypt or decrypt.
+- `<output_file>`: The name of the file where the encrypted/decrypted data will be saved.
+- `<key_file>`: The file containing the key used for encryption/decryption.
+- `-p <password>` (optional): Password to authenticate the user (default is `secret`).
+- `-t <threads>` (optional): Number of threads to use for processing. Default is 2.
+- `-v` (optional): Enable verbose mode to show progress.
+- `-d` (optional): Decrypt the file (default is encrypt).
+- `-e` (optional): Encrypt the file (default).
+
+### Examples:
+
+#### Encrypt a file:
+```bash
+rudra myfile.txt encrypted_output.bin keyfile.key -e -p mypassword
+```
+
+#### Decrypt a file:
+```bash
+rudra encrypted_output.bin decrypted_output.txt keyfile.key -d -p mypassword
+```
+
+### Important Notes:
+- The program uses XOR encryption and appends a header containing a checksum when encrypting.
+- For decryption, the checksum is verified to ensure data integrity.
+- The password is required to prevent unauthorized access. By default, it is `secret`.
+- You can dynamically set or remove the password using the environment variables, as described in the features section.
+
+## Contributing
+
+Contributions are welcome! If you find any bugs or want to add a feature, feel free to fork the repository and create a pull request.
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -am 'Add new feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Create a new pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- Thanks to the open-source community for their contributions and support.
+```
