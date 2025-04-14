@@ -1,6 +1,3 @@
-Here is the updated `README.md` with the added **Usage** section you provided:
-
-```markdown
 # Rudra - XOR-Based Encryption Program
 
 Rudra is a secure and efficient command-line encryption tool designed to provide XOR-based encryption with multi-threading support for fast and secure file processing. The program supports both encryption and decryption, password protection, and secure memory handling.
@@ -11,16 +8,6 @@ Rudra is a secure and efficient command-line encryption tool designed to provide
 - **Password Protection**: Ensures that the program is used securely by requiring a password.
 - **Secure Memory Handling**: Includes memory wiping techniques to ensure sensitive data is not left in memory.
 - **Checksum Validation**: Verifies the integrity of files during decryption.
-- **Password Management**: You can dynamically set and remove the password using environment variables. Use `echo` to set the password and `unset` to remove it:
-  - **Set Password**: 
-    ```bash
-    echo "export RUDRA_PASSWORD='your_password'" >> ~/.bashrc
-    source ~/.bashrc
-    ```
-  - **Remove Password**:
-    ```bash
-    unset RUDRA_PASSWORD
-    ```
 
 ## Installation
 
@@ -36,19 +23,7 @@ Ensure that you have the following dependencies installed:
    ```bash
    git clone https://github.com/username/rudra-encryption.git
    cd rudra-encryption
-   ```
 
-2. **Build the program** using `make`:
-   ```bash
-   make
-   ```
-
-3. **Install the program** (optional):
-   ```bash
-   sudo make install
-   ```
-
-   This will copy the binary to `/usr/local/bin` for system-wide access.
 
 ## Usage
 
