@@ -1,0 +1,11 @@
+# Ignore compiled binaries
+*.o
+*.out
+*.exe
+rudra
+
+# Ignore configuration files
+*.log
+
+# Ignore system files
+.DS_Store
